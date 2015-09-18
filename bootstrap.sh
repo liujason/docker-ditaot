@@ -17,3 +17,10 @@ curl -sSL https://github.com/dita-ot/dita-ot/releases/download/2.1.1/dita-ot-2.1
 cd /vagrant/dita-ot
 docker build -t ot .
 docker run ot #this should display help
+
+# create ditahs temp
+mkdir /tmp/ditahs
+
+# THE FOLLOWING ISN'T WORKING
+# vagrant@vagrant-ubuntu-trusty-64:/vagrant/temp/authoring$ docker run -v /vagrant/temp/authoring:/tmp /ot/input:ro -v /vagrant/temp/output:/tmp/ot/output ot -i /tmp/ot/input -o /tmp/ot/output -f html5
+# Error: [DOTA069F][FATAL] Input file '/tmp/ot/input' cannot be located or read. Ensure that file was specified properly and that you have permission to access it.
