@@ -1,3 +1,5 @@
 .DS_Store
 /.vagrant
-/temp
+/temp/
+/tests/output
+node_modules/
