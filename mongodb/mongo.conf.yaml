@@ -4,6 +4,6 @@ systemLog:
   logAppend: true
 
 storage:
-  dbpath: "/data/mongo"
+  dbPath: "/data/mongo"
   mmapv1:
     smallFiles: true

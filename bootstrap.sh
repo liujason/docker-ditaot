@@ -8,7 +8,9 @@ curl -O https://raw.githubusercontent.com/nodesource/distributions/master/deb/se
 chmod +x setup_4.x
 ./setup_4.x
 apt-get install -y nodejs
-npm install -g yo grunt-cli bower
+npm install -g yo grunt-cli bower # dependencies needed to run `grunt serve`
+apt-get install -y ruby-full # ruby needed to install sass
+gem install sass # sass is needed for running grunt
 # ==============================================================================
 # install docker (only when not installed)
 if ! hash docker 2>/dev/null; then
