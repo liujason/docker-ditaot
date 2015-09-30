@@ -1,9 +1,9 @@
 systemLog:
   destination: file
-  path: "/logs/mongo.log"
+  path: "/var/log/mongo.log"
   logAppend: true
 
 storage:
-  dbPath: "/data/mongo"
+  dbPath: "/data/db"
   mmapv1:
     smallFiles: true

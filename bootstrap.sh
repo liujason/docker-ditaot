@@ -43,5 +43,7 @@ docker run ot #this should display OT help
 # build docker-mongo
 cd /vagrant/mongodb
 docker build -t mongo .
-mkdir -p /mnt/data/mongo /mnt/logs
-docker run -d -v /mnt/data:/data -v /mnt/logs:/logs -p 27017:27017 mongo
+#mkdir -p /mnt/data/mongo /mnt/logs
+docker create -v /data/db --name mongodata ubuntu:14.04 /bin/true
+docker run -d --volumes-from mongodata --name mongodb -p 27017:27017 mongo
+# docker run -it -v /mnt/data:/data -v /mnt/logs:/logs -p 27017:27017 -u mongo --entrypoint "/bin/bash" mongo
