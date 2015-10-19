@@ -47,3 +47,10 @@ docker build -t mongo .
 docker create -v /data/db --name mongodata ubuntu:14.04 /bin/true
 docker run -d --volumes-from mongodata --name mongodb -p 27017:27017 mongo
 # docker run -it --volumes-from mongodata -p 27017:27017 -u mongo --entrypoint "/bin/bash" mongo
+
+# ==============================================================================
+# build docker-redis
+cd /vagrant/redis
+docker build -t redis .
+docker create -v /data/redis --name redisdata ubuntu:14.04 /bin/true
+docker run -d --volumes-from redisdata --name redisdb -p 6379:6379 redis

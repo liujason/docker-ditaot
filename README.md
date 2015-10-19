@@ -12,3 +12,6 @@ To run the docker and get default -help OT message:
 
 To run the docker and build the source documentation:
 `docker run liujason/ditaot:2.1.1 -f html5 -i ./dita-ot-2.1.1/docsrc/userguide.ditamap -v`
+
+To bring up a vagrant dev box, run `vagrant up` - be patient, it could take up
+to 15 minutes for it to download and provision everything. 
