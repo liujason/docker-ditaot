@@ -1,7 +1,3 @@
-/* Queue service using Kue */
-
-/* So far, this is testing only. */
-
 var kue = require('kue');
 var jobs = kue.createQueue();
 
