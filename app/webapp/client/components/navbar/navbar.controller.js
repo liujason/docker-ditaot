@@ -5,6 +5,9 @@ angular.module('nodeappApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    },{ //JL
+      'title': 'Upload',
+      'link': '/upload'
     }];
 
     $scope.isCollapsed = true;

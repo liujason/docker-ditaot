@@ -1,4 +1,5 @@
 'use strict';
+var path = require('path');
 
 // Development specific configuration
 // ==================================
@@ -8,5 +9,6 @@ module.exports = {
     uri: 'mongodb://localhost/nodeapp-dev'
   },
 
-  seedDB: true
+  seedDB: true,
+
 };

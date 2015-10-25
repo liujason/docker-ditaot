@@ -1,0 +1,13 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+h1 Upload sample DITA source
+form
+  
+  input(name='outputType', ng-model='outputType', type='radio', value='pdf') 
+  |PDF
+  input(name='outputType', ng-model='outputType', type='radio', value='html5', checked=true) 
+  |HTML5
+  input(type='file', ngf-select, ng-model='file', name='file', required)
+  span.progress(ng-show='file.progress>=0')
+    div(style='width:{{file.progress}}%', ng-bind="file.progress + '%'")
+  button(ng-click='doUpload(file)') upload

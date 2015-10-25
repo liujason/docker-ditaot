@@ -1,5 +1,5 @@
 {
-  "name": "dita-output-queue",
+  "name": "dita-OT-runner",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,6 +9,8 @@
   "author": "Jason Liu",
   "license": "ISC",
   "dependencies": {
-    "kue": "^0.9.6"
+    "dockerode": "^2.2.3",
+    "kue": "^0.9.6",
+    "unzip2": "^0.2.5"
   }
 }

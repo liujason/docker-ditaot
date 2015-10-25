@@ -54,3 +54,12 @@ cd /vagrant/redis
 docker build -t redis .
 docker create -v /data/redis --name redisdata ubuntu:14.04 /bin/true
 docker run -d --volumes-from redisdata --name redisdb -p 6379:6379 redis
+
+# ==============================================================================
+# Install phantomJS for testing
+# https://gist.github.com/julionc/7476620#file-install_phantomjs-sh
+cd ~
+wget https://gist.githubusercontent.com/julionc/7476620/raw/e8f36f2a2d616720983e8556b49ec21780c96f0c/install_phantomjs.sh
+chmod +x install_phantomjs.sh
+./install_phantomjs.sh
+export PHANTOMJS_BIN=/usr/local/bin/phantomjs
