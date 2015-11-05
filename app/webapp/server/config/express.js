@@ -42,7 +42,7 @@ module.exports = function(app) {
       db: 'nodeapp'
     })
   }));
-  
+
   if ('production' === env) {
     app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
     app.use(express.static(path.join(config.root, 'public')));
@@ -52,6 +52,8 @@ module.exports = function(app) {
 
   if ('development' === env || 'test' === env) {
     app.use(require('connect-livereload')());
+    //JL - serve output as static files. url is mapped to /tmp/...
+    app.use('/tmp', express.static('/tmp/uploads'));
     app.use(express.static(path.join(config.root, '.tmp')));
     app.use(express.static(path.join(config.root, 'client')));
     app.set('appPath', path.join(config.root, 'client'));

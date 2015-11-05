@@ -18,7 +18,10 @@ queue.process('guest_output', function(job, done){
       // remove lingering ot containers: docker ps --all | grep ot | awk '{print $1}' | xargs docker rm
       docker.run(
         'ot',
-        ['-i','/tmp/ot/input/index.ditamap', '-o','/tmp/ot/output', '-f','html5'],
+        ['-i','/tmp/ot/input/index.ditamap',
+        '-o','/tmp/ot/output',
+        '-f','html5',
+        '-v'],
         [process.stdout, process.stderr],
         {
           Tty:false,

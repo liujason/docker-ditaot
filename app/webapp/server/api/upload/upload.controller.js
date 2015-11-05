@@ -19,6 +19,8 @@ exports.upload = function(req, res){
   });
 
   job.on('complete', function(result){
+    // prompt users to view output
+
     console.log('job complete. ', result);
   }).on('progress', function(progress, data){
     console.log(job.id + ' '+ progress+' %. '+data);
